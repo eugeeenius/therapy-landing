@@ -1,37 +1,34 @@
-// window.addEventListener('scroll', scrollHandler)
-// $surface.addEventListener('touchmove', scrollHandler)
-function scrollHandler() {
-  if (window.pageYOffset > 150) {
+let surfaceToggleMoveDown = true
+let basisToggleMoveDown = true
+let sliderPreventVerticalScroll = true
+
+$surface.addEventListener('touchend', async () => {
+  if (basisToggleMoveDown) {
+    await window.scrollY > surfaceHeight / 2 === true
     navSecondActive()
+    surfaceToggleMoveDown = !surfaceToggleMoveDown
+  } else {
+    surfaceToggleMoveDown = !surfaceToggleMoveDown
   }
-}
-// function scrollHandler() {
-//   const offsetTop = $surface.getBoundingClientRect().top
+})
 
-//   if (offsetTop >= -400) {
-//     navFirstActive()
-//     // window.scrollTo(0, 0)
-//   }
-//   else if (-1168 <= offsetTop && offsetTop <= -400) {
-//     navSecondActive()
-//     window.scroll(0, 768)
-//   }
-//   else {
-//     navThirdActive()
-//     window.scroll(0, 1536)
-//   }
+$basis.addEventListener('touchend', async () => {
+  if (basisToggleMoveDown) {
+    await window.scrollY > surfaceHeight + basisHeight / 2 === true
+    navThirdActive()
+    basisToggleMoveDown = !basisToggleMoveDown
+  } else {
+    await window.scrollY < surfaceHeight + basisHeight / 2 === true
+    await navFirstActive()
+    basisToggleMoveDown = !basisToggleMoveDown
+  }
+})
 
-// }
+// $slider.addEventListener('touchmove', async () => {
+//   await window.scrollY < 1.2 * surfaceHeight + basisHeight === true
+//   navSecondActive()
+// })
 
-// function goToSection() {
-//   if (navFirst.classList.contains('active')) {
-//     window.scrollTo(0, 0)
-//   }
-//   else if (navSecond.classList.contains('active')) {
-//     window.scrollTo(0, -768)
-//   }
-//   else if (navThird.classList.contains('active')) {
-//     $slider.scrollIntoView()
-//     window.scrollTo(0, -1536)
-//   }
-// }
+window.addEventListener('touchmove', event => {
+
+})

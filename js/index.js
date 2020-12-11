@@ -1,4 +1,5 @@
 // Elements
+document.addEventListener('DOMContentLoaded', () => window.scroll(0, 0));
 const $surface = document.getElementById('surface')
 const $basis = document.getElementById('basis')
 const $slider = document.getElementById('slider')
@@ -31,7 +32,6 @@ function navThirdActive() {
   window.scroll(0, surfaceHeight + basisHeight)
 }
 
-
 // Nav buttons behaviour
 navFirst.addEventListener('click', () => {
   navFirstActive()
@@ -42,24 +42,3 @@ navSecond.addEventListener('click', () => {
 navThird.addEventListener('click', () => {
   navThirdActive()
 })
-
-// On scroll behaviour
-$surface.addEventListener('touchend', async () => {
-  await window.scrollY > surfaceHeight / 2 === true
-  navSecondActive()
-})
-
-$basis.addEventListener('touchend', async () => {
-  await window.scrollY > surfaceHeight + basisHeight / 2 === true
-  navThirdActive()
-})
-
-$slider.addEventListener('touchmove', (e) => {
-  console.log(determineSwipeDirection(e.target))
-  // await window.scrollY > surfaceHeight / 2 === true
-  // navSecondActive()
-})
-
-
-
-
