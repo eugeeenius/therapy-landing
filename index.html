@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="move-down hide">
+      <div>Листайте вниз</div>
+      <div class="move-down__arrow">
+        <img src="./icons/arrow-down.svg" alt="arrow-down">
+      </div>
+    </div>
+
+    <div class="nav">
+      <button id="navFirst" class="nav__item active"></button>
+      <button id="navSecond" class="nav__item"></button>
+      <button id="navThird" class="nav__item"></button>
+    </div>
+
+    <section class="surface" id="surface">
+      <h1 class="surface__title">Всегда ли цели терапии СД2
+        <br>
+        на поверхности?</h1>
+
+      <div class="surface__peak first">
+        <div class="ripple"></div>
+        Цель по HbA1c
+      </div>
+      <div class="surface__peak second">
+        <div class="ripple"></div>
+        Гипогликемия
+      </div>
+      <div class="surface__peak third">
+        <div class="wrap">
+          <div class="ripple"></div>
+        </div>
+        <div>Осложнения СД</div>
+      </div>
+      <div class="surface__peak fourth">
+        <div class="ripple"></div>
+        СС риски
+      </div>
+    </section>
+
+    <section class="basis" id="basis">
+      <div class="basis__descr">
+        Основа терапии — <br>
+        патогенез СД2
+      </div>
+    </section>
+
+  </div>
+
+  <div id="slider" class="slider">
+
+    <section class="slider__one">
+      <h1>Звенья патогенеза СД2</h1>
+
+    </section>
+
+    <section class="slider__two">
+      <h1>Смертельный октет</h1>
+
+    </section>
+
+    <section class="slider__three">
+      <h1>Звенья патогенеза СД2</h1>
+
+    </section>
+
+  </div>
+</body>
+<script src="./js/utils/autoScroll.js"></script>
+<script src="./js/utils/swipe.js"></script>
+<script src="./js/index.js"></script>
+
+</html>

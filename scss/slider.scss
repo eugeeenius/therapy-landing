@@ -1,0 +1,32 @@
+.slider {
+  position: relative;
+  display: flex;
+  overflow-y: hidden;
+  margin-right: calc(100% - 1024px);
+  // z-index: -1;
+  
+  h1 {
+    margin-left: 88px;
+    margin-top: 116px;
+    color: #fff;
+    font-size: 30px;
+    font-family: 'GothamPro';
+    font-weight: 400;
+  }
+  
+  &__one {
+    background: rgb(233, 142, 142);
+    min-width: 1024px;
+    z-index: -1;
+  }
+
+  &__two {
+    background: rgb(219, 236, 144);
+    min-width: 1024px;
+  }
+
+  &__three {
+    background: rgb(142, 140, 240);
+    min-width: 1024px;
+  }
+}

@@ -1,0 +1,111 @@
+@import 'variables';
+@import 'keyframes';
+@import 'mixins';
+
+.surface {
+  background: url('../img/bg/surface.jpg') center center /cover no-repeat;
+  color: $blue;
+  padding: 145px 0 0 70px;
+  font-size: 20px;
+  font-weight: 300;
+
+  &__title {
+    font-family: 'GothamPro';
+    font-size: 50px;
+    font-weight: 400;
+  }
+
+  &__peak {
+    position: absolute;
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    
+    &.first {
+      top: 280px;
+      left: 580px;
+
+      .ripple {
+        margin-right: 29px;
+        border-radius: 50%;
+        width: 16px;
+        background: $rpl-orange;
+        height: 16px;
+        animation: ripple1 1s linear infinite;
+      }
+    }
+
+    &.second {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      top: 398px;
+      left: 224px;
+
+      .ripple {
+        margin-top: 22px;
+        width: 11px;
+        height: 11px;
+        animation: ripple2 1s linear infinite;
+        @include rpl;
+      }
+    }
+
+    &.second {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      top: 398px;
+      left: 224px;
+
+      .ripple {
+        margin-top: 22px;
+        width: 11px;
+        height: 11px;
+        animation: ripple2 1s linear infinite;
+        @include rpl;
+        
+      }
+    }
+    
+    &.third {
+      top: 510px;
+      left: 370px;
+      display: flex;
+      flex-direction: column-reverse;
+      line-height: 0;
+      
+      .wrap {
+        padding-top: 32px;
+        padding-left: 81px;
+      }
+
+      .ripple {
+        width: 5px;
+        height: 5px;
+        animation: ripple3 1s linear infinite;
+        @include rpl;
+      }
+
+    }
+
+    &.fourth {
+      top: 490px;
+      left: 788px;
+      display: flex;
+      flex-direction: column-reverse;
+
+      .ripple {
+        margin-top: 14px;
+        width: 5px;
+        height: 5px;
+        animation: ripple3 1s linear infinite;
+        @include rpl;
+      }
+    }
+  }
+}
