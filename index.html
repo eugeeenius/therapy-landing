@@ -11,7 +11,7 @@
 <body>
   <div class="container">
 
-    <div class="move-down hide">
+    <div class="move-down" id="move-down">
       <div>Листайте вниз</div>
       <div class="move-down__arrow">
         <img src="./icons/move-down.svg" alt="arrow-down">
@@ -60,7 +60,9 @@
 
   <div id="slider" class="slider">
 
-    <section class="slider__one">
+    <input type="range" class="hidden" id="range" min="0" max="100" step="1" value="0">
+
+    <section class="slider__one" id="slider-one">
       <h1>Звенья патогенеза СД2</h1>
 
       <div class="glicemia">
@@ -100,7 +102,7 @@
     </section>
 
 
-    <section class="slider__two">
+    <section class="slider__two" id="slider-two">
       <h1>Смертельный октет</h1>
 
       <div class="glicemia">
@@ -236,7 +238,7 @@
 
     </section>
 
-    <section class="slider__three">
+    <section class="slider__three" id="slider-three">
       <h1>Звенья патогенеза СД2</h1>
       <img src="./img/slider/3/tab_3.png" alt="content">
     </section>
@@ -246,6 +248,7 @@
 
 </body>
 <script src="./js/index.js"></script>
-<script src="./js/utils/autoScroll.js"></script>
+<script src="./js/utils/autoScrollY.js"></script>
+<script src="./js/utils/scrollX.js"></script>
 
 </html>

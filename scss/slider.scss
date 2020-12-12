@@ -1,8 +1,8 @@
 .slider {
   position: relative;
   display: flex;
-  overflow-y: hidden;
   margin-right: calc(100% - 1024px);
+  overflow-y: hidden;
   
   h1 {
     margin-left: 88px;
@@ -14,12 +14,10 @@
   }
 
   &__two {
-    background: rgb(219, 236, 144);
     min-width: 1024px;
   }
 
   &__three {
-    background: rgb(142, 140, 240);
     min-width: 1024px;
   }
 }
