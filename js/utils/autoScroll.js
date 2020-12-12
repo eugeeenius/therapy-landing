@@ -12,17 +12,17 @@ $surface.addEventListener('touchend', async () => {
   }
 })
 
-$basis.addEventListener('touchend', async () => {
-  if (basisToggleMoveDown) {
-    await window.scrollY > surfaceHeight + basisHeight / 2 === true
-    navThirdActive()
-    basisToggleMoveDown = !basisToggleMoveDown
-  } else {
-    await window.scrollY < surfaceHeight + basisHeight / 2 === true
-    await navFirstActive()
-    basisToggleMoveDown = !basisToggleMoveDown
-  }
-})
+// $basis.addEventListener('touchend', async () => {
+//   if (basisToggleMoveDown) {
+//     await window.scrollY > surfaceHeight + basisHeight / 2 === true
+//     navThirdActive()
+//     basisToggleMoveDown = !basisToggleMoveDown
+//   } else {
+//     await window.scrollY < surfaceHeight + basisHeight / 2 === true
+//     await navFirstActive()
+//     basisToggleMoveDown = !basisToggleMoveDown
+//   }
+// })
 
 // $slider.addEventListener('touchmove', async () => {
 //   await window.scrollY < 1.2 * surfaceHeight + basisHeight === true

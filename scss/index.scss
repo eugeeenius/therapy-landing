@@ -1,8 +1,4 @@
-@import 'fonts';
-@import 'surface';
-@import 'basis';
-@import 'slider';
-
+@import 'variables';
 * {
 	margin: 0;
 	padding: 0;
@@ -70,3 +66,32 @@ section {
     }
   }
 }
+
+.bubble {
+  display: flex;
+  color: #fff;
+  font-size: 22px;
+  align-items: center;
+  justify-content: center;
+
+  .num {
+    font-size: 36px;
+  }
+
+  &__content {
+    border-radius: 50%;
+    background: rgb(55, 62, 91);
+    font-size: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@import 'fonts';
+@import 'surface';
+@import 'basis';
+@import 'slider';
+@import 'sliderOne';
+@import 'sliderTwo';
+@import 'sliderThree';

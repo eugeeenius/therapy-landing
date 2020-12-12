@@ -1,5 +1,5 @@
-// Elements
-document.addEventListener('DOMContentLoaded', () => window.scroll(0, 0));
+
+// document.addEventListener('DOMContentLoaded', () => window.scroll(0, 0));
 const $surface = document.getElementById('surface')
 const $basis = document.getElementById('basis')
 const $slider = document.getElementById('slider')
